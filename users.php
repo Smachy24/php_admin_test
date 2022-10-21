@@ -52,20 +52,19 @@ $users = $stmt->fetchAll();
                     echo "<td>" . $bd->getUsers()[$a][$b] . "</td>";
                     
                     }
-                    
-                    
-                    
+
 
                     echo "<form method = 'post'>";
-                    echo "<td><button type=submit name ='delete'>Delete</button></td>";
+                    echo "<td><button type=submit name ='delete' value=".$bd->getUsers()[$a][0].">Delete</button></td>";
                     echo "<td><button form ='post' name ='a'>Update</button></td>";
                     echo "</form>";
                     echo "</tr>";
 
-                    if(isset($_POST["delete"])){
-                        $user_id = $bd->getUsers()[$a][0];
-                        echo $user_id;
-                    }
+                   
+                }
+                if(isset($_POST["delete"])){
+                        
+                    echo $_POST["delete"];
                 }
 
             ?>
